@@ -1,0 +1,8 @@
+{
+  "name": "Cool-Hover-Effect",
+  "version": "0.0.1",
+  "dependencies": {
+    "normalize-css": "~2.1.1",
+    "prefix-free": "latest"
+  }
+}
