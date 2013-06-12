@@ -1,12 +1,7 @@
-
-
-// IMPORTS
+@import "compass/css3";
 
 @import url(http://fonts.googleapis.com/css?family=Oxygen:300);
 @import url(http://weloveiconfonts.com/api/?family=maki);
-
-
-// VARIABLES
 
 $teel: #529494;
 $peach: #ea5844;
@@ -14,11 +9,7 @@ $blue-black: #222c2e;
 $wheat: #e6e8d1;
 $brown: #706557;
 
-
-// SETUP
-
-* { box-sizing: border-box; -webkit-font-smoothing: subpixel-antialiased;
- }
+* { @include box-sizing(border-box); }
 
 [class*="maki-"]:before { font-family: 'maki', sans-serif; }
 
@@ -42,7 +33,6 @@ h1 {
 
 a { text-decoration: none; color: inherit; }
 
-
 // THEME
 
 div.container {
@@ -55,7 +45,7 @@ div.container {
 }
 .pizza-link {
   display: block;
-  transition: border .4s;
+  @include transition(border .4s);
   width: 230px;
   border: 1px solid #ccc;
   float: left;
@@ -80,14 +70,14 @@ div.container {
     position: relative;
     color: $blue-black;
     font-weight: 800;
-    transition: color 0.2s;
+    @include transition(color 0.2s);
   }
   p {
     color: $wheat;
     margin: 0;
     position: relative;
     font-size: 0.9rem;
-    transition: color 0.2s;
+    @include transition(color 0.2s);
   }
   h3, p {
     transition: 0.2s;
@@ -111,21 +101,22 @@ div.container {
     top: 20px;
     left: 50%;
     margin-left: -25px;
-    transition:
+    @include transition(
       width 0.2s,
       left 0.2s,
       margin-left 0.2s,
       top 0.2s 0.2s,
-      height 0.2s 0.2s;
+      height 0.2s 0.2s
+      );
   }
   &:hover, &:active {
     h3 {
       color: $wheat;
-      transition: border-bottom-color 0.2s;
+      @include transition(border-bottom-color 0.2s);
       border-bottom-color: lighten($blue-black, 50%);
     }
     p {
-      transition: color 0.2s;
+      @include transition(color 0.2s);
       color: darken($blue-black, 20%);
     }
     &:before {
@@ -154,10 +145,3 @@ footer {
   }
   }
 }
-
-
-
-
-
-
-
